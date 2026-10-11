@@ -4,108 +4,89 @@ const Login = () => {
   return (
     <>
       <section className="bg-amber-400 ">
-      <div className="flex flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0">
-             <div className="w-full bg-white h-120  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
-                <div className="flex justify-center">
-                  <h1> LOGO</h1>
-                </div>
-             </div>
-      </div>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div className="flex flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0">
+          <div className="w-full bg-white h-150  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
           
-          <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-            <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <div className="flex justify-center">
+          <div className="flex justify-center ">
+              <div className="py-5">
                 <img
-                  className="w-20 h-20 mr-2"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
-                  alt="logo"
-                />
+                  className="w-50 h-50 mr-2"
+                  src="https://img.magnific.com/free-vector/creative-data-logo-template_23-2149212798.jpg?semt=ais_hybrid&w=740&q=80"
+                ></img>
+                <h1 className=" text-xl">Sign in to your account</h1>
               </div>
-
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                Sign in to your account
-              </h1>
-              <form
-                className="space-y-4 md:space-y-6"
-                onSubmit={(e) => e.preventDefault()}
+            </div>
+            <div className="px-5">
+              <label
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Your email
-                  </label>
+                Your email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 
+                focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-40
+                dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="name@company.com"
+                required
+              />
+            </div>
+            <div className="px-5 py-5">
+              <label
+                htmlFor="password"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="••••••••"
+                className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 
+                block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+                 dark:focus:border-blue-500"
+                required
+              />
+            </div>
+            <div className="flex items-center justify-between px-5">
+              <div className="flex items-start">
+                <div className="flex items-center h-5">
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@company.com"
-                    required
+                    id="remember"
+                    aria-describedby="remember"
+                    type="checkbox"
+                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700
+                     dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
                   />
                 </div>
-                <div>
+                <div className="ml-3 text-sm">
                   <label
-                    htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    htmlFor="remember"
+                    className="text-gray-500 dark:text-gray-300"
                   >
-                    Password
+                    Remember me
                   </label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="••••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required
-                  />
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-start">
-                    <div className="flex items-center h-5">
-                      <input
-                        id="remember"
-                        aria-describedby="remember"
-                        type="checkbox"
-                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                      />
-                    </div>
-                    <div className="ml-3 text-sm">
-                      <label
-                        htmlFor="remember"
-                        className="text-gray-500 dark:text-gray-300"
-                      >
-                        Remember me
-                      </label>
-                    </div>
-                  </div>
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
-                    Forgot password?
-                  </a>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full text-white  bg-amber-400 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                >
-                  Sign in
-                </button>
-              </form>
+              </div>
+              <a
+                href="#"
+                className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
+              >
+                Forgot password?
+              </a>
+            </div>
+            <div className="px-5 py-5">
+              <button
+                type="submit"
+                className="w-full  text-white  bg-amber-400 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-primary-300 
+                font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              >
+                Sign in
+              </button>
             </div>
           </div>
         </div>
